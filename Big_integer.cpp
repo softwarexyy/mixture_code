@@ -2,7 +2,7 @@
 /****************** addtion and mulpulation , express the numbers as strings ********************/
 
 // add two numbers
-string add(string num1, string num2)
+string add(string& num1, string& num2)
 {
     reverse(num1.begin(), num1.end());
     reverse(num2.begin(), num2.end());
@@ -39,13 +39,15 @@ string add(string num1, string num2)
 
     if (res[size-1] == '0')
         res.erase(res.end()-1);
-
+    
+    reverse(num1.begin(), num1.end());
+    reverse(num2.begin(), num2.end());
     reverse(res.begin(), res.end());
     return res;
 }
 
 // a number   multiply with   a single digit number(express it by a char num2)
-string multi_single(string num1, char num2)
+string multi_single(string& num1, char& num2)
 {
     reverse(num1.begin(), num1.end());
     string res;
@@ -61,6 +63,7 @@ string multi_single(string num1, char num2)
     if (res[res.size()-1] == '0')
         res.erase(res.end()-1);
     
+    reverse(num1.begin(), num1.end());
     reverse(res.begin(), res.end());
     return res;
 }
