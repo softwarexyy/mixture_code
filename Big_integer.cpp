@@ -1,7 +1,7 @@
 /***************** This is used to compute with big integer ***************/
-/****************** addtion and mulpulation *******************************/
+/****************** addtion and mulpulation , express the numbers as strings ********************/
 
-
+// add two numbers
 string add(string& num1, string& num2)
 {
     string res;
@@ -36,6 +36,25 @@ string add(string& num1, string& num2)
     }
 
     if (res[size-1] == '0')
+        res.erase(res.end()-1);
+
+    return res;
+}
+
+// a number   multiply with   a single digit number(express it by a char num2)
+string multi_single(string num1, char num2)
+{
+    string res;
+    for (int i=0; i<num1.size()+1; i++)
+        res.push_back('0');
+
+    for (int i=0; i<num1.size(); i++)
+    {
+        int tmpres = (num1[i]-'0') * (num2-'0') + (res[i]-'0');
+        res[i] = tmpres%10 + '0';
+        res[i+1] = tmpres/10 + '0';
+    }
+    if (res[res.size()-1] == '0')
         res.erase(res.end()-1);
 
     return res;
