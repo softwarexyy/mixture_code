@@ -2,8 +2,10 @@
 /****************** addtion and mulpulation , express the numbers as strings ********************/
 
 // add two numbers
-string add(string& num1, string& num2)
+string add(string num1, string num2)
 {
+    reverse(num1.begin(), num1.end());
+    reverse(num2.begin(), num2.end());
     string res;
     int i;
     int size = num1.size()>num2.size() ? (num1.size()+1) : (num2.size()+1);
@@ -38,12 +40,14 @@ string add(string& num1, string& num2)
     if (res[size-1] == '0')
         res.erase(res.end()-1);
 
+    reverse(res.begin(), res.end());
     return res;
 }
 
 // a number   multiply with   a single digit number(express it by a char num2)
 string multi_single(string num1, char num2)
 {
+    reverse(num1.begin(), num1.end());
     string res;
     for (int i=0; i<num1.size()+1; i++)
         res.push_back('0');
@@ -56,6 +60,7 @@ string multi_single(string num1, char num2)
     }
     if (res[res.size()-1] == '0')
         res.erase(res.end()-1);
-
+    
+    reverse(res.begin(), res.end());
     return res;
 }
