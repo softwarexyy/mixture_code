@@ -1,6 +1,7 @@
 /***************** This is used to compute with big integer ***************/
 /****************** addtion and mulpulation , express the numbers as strings ********************/
 
+#include <string>
 // add two numbers
 string add(string& num1, string& num2)
 {
