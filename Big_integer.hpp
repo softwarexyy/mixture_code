@@ -2,6 +2,8 @@
 /****************** addtion and mulpulation , express the numbers as strings ********************/
 
 #include <string>
+#include <algorithm>
+
 // add two numbers
 string add(string& num1, string& num2)
 {
@@ -44,6 +46,7 @@ string add(string& num1, string& num2)
     reverse(num1.begin(), num1.end());
     reverse(num2.begin(), num2.end());
     reverse(res.begin(), res.end());
+    
     return res;
 }
 
@@ -66,6 +69,7 @@ string multi_single(string& num1, char& num2)
     
     reverse(num1.begin(), num1.end());
     reverse(res.begin(), res.end());
+    
     return res;
 }
 
@@ -87,6 +91,6 @@ string multiply(string& num1, string& num2)
         res = add(res, tmpres);
     }
     reverse(num2.begin(), num2.end());  //恢复num2
-
+    
     return res;
 }
