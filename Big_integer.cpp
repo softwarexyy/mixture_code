@@ -67,3 +67,25 @@ string multi_single(string& num1, char& num2)
     reverse(res.begin(), res.end());
     return res;
 }
+
+// multiply two big integers
+string multiply(string& num1, string& num2)
+{
+    if (num1=="0" || num2=="0")
+    {
+        return "0";
+    }
+    string res;
+    reverse(num2.begin(), num2.end());  //倒转num2
+    for (int i=0; i<num2.size(); i++)
+    {
+        string tmpres = multi_single(num1, num2[i]);
+        for (int j=0; j<i; j++)
+            tmpres.push_back('0');
+        //reverse(tmpres.begin(), tmpres.end());
+        res = add(res, tmpres);
+    }
+    reverse(num2.begin(), num2.end());  //恢复num2
+
+    return res;
+}
