@@ -24,7 +24,6 @@ void printSmall(int a, int b, Callbackfunc2 callbacktest){
         cout << b;
 }
 
-
 void mySwap(int *a, int *b){
     int temp = *a;
     *a = *b;
