@@ -1,5 +1,6 @@
+/*opencv使得两个图像镶嵌的应用*/
+
 #include <iostream>
-#include <vector>
 #include <opencv2/core/core.hpp>  
 #include <opencv2/highgui/highgui.hpp>  
 
