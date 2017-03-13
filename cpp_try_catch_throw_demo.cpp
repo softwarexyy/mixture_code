@@ -94,7 +94,7 @@ void try_catch_demo()
     cin >> a;
     try
     {
-        if (1/* 触发异常的条件 */)
+        if (1/* 触发异常的条件，暂用1代替 */)
         {
             //  初始化错误类对象（可用各种exception类，包括自定义的exception类）
             throw exception(/* 初始化异常类对象参数 */);
